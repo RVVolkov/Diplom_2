@@ -32,12 +32,12 @@ public class GetOrderListTests {
         ingredientsBaseSteps = new IngredientsBaseSteps();
         ingredientsResponsePojo = ingredientsBaseSteps.getIngredients();
         ingredients = new ArrayList<>();
-        ingredients.add(ingredientsResponsePojo.getData().get(0).get_id());
-        ingredients.add(ingredientsResponsePojo.getData().get(2).get_id());
-        ingredients.add(ingredientsResponsePojo.getData().get(4).get_id());
-        ingredients.add(ingredientsResponsePojo.getData().get(13).get_id());
-        ingredients.add(ingredientsResponsePojo.getData().get(14).get_id());
-        ingredients.add(ingredientsResponsePojo.getData().get(0).get_id());
+        ingredients.add(ingredientsResponsePojo.getData().get(0).getId());
+        ingredients.add(ingredientsResponsePojo.getData().get(2).getId());
+        ingredients.add(ingredientsResponsePojo.getData().get(4).getId());
+        ingredients.add(ingredientsResponsePojo.getData().get(13).getId());
+        ingredients.add(ingredientsResponsePojo.getData().get(14).getId());
+        ingredients.add(ingredientsResponsePojo.getData().get(0).getId());
         orderRequestPojo = new OrderRequestPojo(ingredients);
         orderBaseSteps = new OrderBaseSteps();
         orderBaseSteps.creatingOrderWithAuth(orderRequestPojo, accessToken);

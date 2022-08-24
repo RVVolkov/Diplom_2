@@ -1,3 +1,4 @@
+import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,8 @@ public class IngredientsResponsePojo {
     @Getter
     @Setter
     public class Data {
-        private String _id;
+        @SerializedName("_id")
+        private String id;
         private String name;
         private String type;
         private int proteins;
@@ -22,7 +24,8 @@ public class IngredientsResponsePojo {
         private String image;
         private String image_mobile;
         private String image_large;
-        private int __v;
+        @SerializedName("__v")
+        private int v;
     }
 
     private boolean success;
